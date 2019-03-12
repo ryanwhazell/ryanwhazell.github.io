@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ryan&#39;s Website</title>
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>
+        
+        <div class="header">
+          <h2 style="text-align: center;">Welcome to my site</h2>
+        </div>
+        
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
         <main>
-            <h2>Is Jeff a bitch?</h2>
-            <p>Lets look into this.</p>
-            <button onclick="analyzeJeff()">Bitch Jeff Analyzer</button>
-            <h1 id="result"></h1>
-        </main>
-        <footer>
+            <h2>Button Test</h2>
+            <button onclick="analyzeJeff()">Click Me</button>
+            <p id="result"></p>
             
-            <!--<span id="copyright"><p>Site by Ryan Hazell</p></span>-->
+            <hr>
+            <h2>Below is a .php test</h2>
+            <?php
+                echo "This line was written with a PHP script";
+            ?>
+        </main>
+        
+        <footer>
+            <hr>
+            <span id="copyright"><p>Ryan W Hazell</p></span>
         </footer>
         <script src="scripts/main.js"></script>
     </body>
