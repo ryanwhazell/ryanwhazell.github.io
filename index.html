@@ -4,6 +4,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ryan&#39;s Website</title>
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <style>
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .column {
+                float: left;
+                width: 31%;
+                padding: 10px;
+            }
+            .img-col-container {
+                text-align: center;
+            }
+            .img-col-container img {
+                width: 90%;
+                border-radius: 100px;
+            }
+            .heroImage img {
+                width: 100%;
+            }
+            @media only screen and (max-width: 1450px) {
+                
+                .column {
+                    width: 50%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    float: none;
+                }
+            }
+            @media only screen and (max-width: 900px) {
+                .column {
+                    width: 100%;
+                }
+            }
+        </style>
     </head>
     <body>
         
@@ -19,9 +55,36 @@
         </ul>
 
         <main>
-            <h2>Button Test</h2>
-            <button onclick="analyzeJeff()">Click Me</button>
-            <p id="result"></p>
+            
+            <div class="heroImage">
+                <img src="https://placeimg.com/1500/420/any">
+            </div>
+            
+            <h1 style="text-align: center;">Placeholder Text</h1>
+            
+            <div class="row">
+                <div class="column">
+                    <div class="img-col-container">
+                        <img src="https://placeimg.com/640/480/any">
+                    </div>
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </div>
+                <div class="column">
+                    <div class="img-col-container">
+                        <img src="https://placeimg.com/640/480/any">
+                    </div>
+                    <h2>Title</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+                <div class="column">
+                    <div class="img-col-container">
+                        <img src="https://placeimg.com/640/480/any">
+                    </div>
+                    <h2>Title</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                </div>
+            </div>
             
         </main>
         
