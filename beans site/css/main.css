@@ -59,6 +59,7 @@ button:hover {
 }
 #hide, #show {
     display: none;
+    cursor: pointer;
 }
 /*Mobile Nagigation*/
 @media only screen and (max-width: 970px) {

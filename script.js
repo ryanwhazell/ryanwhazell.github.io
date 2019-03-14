@@ -1,0 +1,1 @@
+document.getElementById("jstest").innerHTML = "JavaScript file successfully linked";
