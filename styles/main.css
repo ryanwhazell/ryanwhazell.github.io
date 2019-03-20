@@ -131,7 +131,10 @@ footer {
         margin-bottom: 0;
         margin-top: 0;
     }
-    .navlink, #hide, #show {
+    .navlink {
+        display: none;
+    }
+    #hide, #show {
       float: none;
       display: block;
       color: #f2f2f2;

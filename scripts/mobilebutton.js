@@ -1,6 +1,13 @@
 $(document).ready(function(){
     $("#show").hide();
     
+     if ($(window).width() < 700) {
+        $(".navlink").hide();
+      }
+     else {
+        $(".navlink").show();
+     };
+    
     $("#hide").click(function(){
         $("#hide").hide();
         $("#show").show();
