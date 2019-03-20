@@ -1,18 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <title>Website</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <style>
+            .info-boxes {
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -50px;
+                z-index: 5;
+                position: relative;
+            }
+            .info-boxes:after {
+                clear: both;
+                content: "";
+                display: table;
+            }
+            .Box {
+                width: 30%;
+                padding: 10px;
+                min-height: 150px;
+                color: white;
+                background-color: darkgray;
+                float: left;
+                text-align: center;
+            }
+            .Box:nth-of-type(2) {
+                background-color: grey;
+            }
+            .row:after {
+                clear: both;
+                content: "";
+                display: table
+            }
+            .column {
+                float: left;
+                width: 50%;
+                padding-bottom: 50px;
+            }
+            .column img {
+                float: left;
+                padding-right: 50px;
+            }
+            .column p {
+                padding-right: 50px;
+            }
+            @media only screen and (max-width: 1100px) {
+                .Box {
+                    width: 100%;
+                }
+                .info-boxes {
+                    margin-top: 0;
+                }
+                .column {
+                    width: 100%;
+                }
+            }
+        </style>
     </head>
     <body>
+        <header>
+            <a href="index.html">
+                <img id="site-logo" src="https://via.placeholder.com/50">
+                <h1 id="site-title">Website Title</h1>
+            </a>
+        </header>
+        <nav id="navbar">
+            <span id="hide">Hide</span>
+            <span id="show">Show</span>
+            <a href="#" class="navlink">Home</a>
+            <a href="#" class="navlink">Gallery</a>
+            <a href="#" class="navlink">About Us</a>
+            <a href="#" class="navlink">Contact Us</a>
+        </nav>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/1920x400" alt="Hero Image">
+        </div>
+        <div class="info-boxes">
+            <div class="Box">
+                <h2>Content</h2>
+                <p>Words</p>
+            </div>
+            <div class="Box">
+                <h2>Content</h2>
+                <p>Words</p>
+            </div>
+            <div class="Box">
+                <h2>Content</h2>
+                <p>Words</p>
+            </div>
+        </div>
         <main>
-            <h1>Header</h1>
-            <p>Text</p>
-            <p id="jstest"></p>
-            <a href="RPG/rpg.html">Click here to play a broken unfinished game</a>
+            <div class="row">
+                <div class="column">
+                    <img src="https://via.placeholder.com/100">
+                    <p>Placeholder text goes here to simulate content placeholder text goes here to simulate content placeholder text goes here to simulate content</p>
+                </div>
+                <div class="column">
+                    <img src="https://via.placeholder.com/100">
+                    <p>Placeholder text goes here to simulate content placeholder text goes here to simulate content placeholder text goes here to simulate content</p>
+                </div>
+                <div class="column">
+                    <img src="https://via.placeholder.com/100">
+                    <p>Placeholder text goes here to simulate content placeholder text goes here to simulate content placeholder text goes here to simulate content</p>
+                </div>
+                <div class="column">
+                    <img src="https://via.placeholder.com/100">
+                    <p>Placeholder text goes here to simulate content placeholder text goes here to simulate content placeholder text goes here to simulate content</p>
+                </div>
+            </div>
+            <h2>Main Content Goes Here</h2>
+            <p>If you have more content you wish to display it can go here</p>
+
         </main>
-        <script src="script.js"></script>
+        <footer>
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <a href="#">E-Mail</a>
+                <a href="#">Phone</a>
+                <a href="#">Facebook</a>
+            </div>
+        </footer>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/mobilebutton.js"></script>
     </body>
 </html>
