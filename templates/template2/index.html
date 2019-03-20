@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="styles/main.css">
+        <title>Template Two</title>
+        <style>
+            .row, .intro-row {
+                margin-bottom: 50px;
+            }
+            .row:after, .intro-row:after {
+                clear: both;
+                display: table;
+                content: "";
+            }
+            .column {
+                width: 25%;
+                float: left;
+                min-height: 1px;
+            }
+            .column h2 {
+                text-align: center;
+                color: white;
+            }
+            .column p {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .row-gallery {
+              display: -ms-flexbox; /* IE10 */
+              display: flex;
+              -ms-flex-wrap: wrap; /* IE10 */
+              flex-wrap: wrap;
+              padding: 0 4px;
+                width: 100%;
+            }
+            .column-gallery {
+              -ms-flex: 25%; /* IE10 */
+              flex: 23%;
+              max-width: 25%;
+              padding: 0 4px;
+            }
+
+            .column-gallery img {
+              margin-top: 8px;
+              vertical-align: middle;
+            }
+            @media only screen and (max-width: 1100px) {
+                .column {
+                    width: 100%
+                }
+            }
+            @media screen and (max-width: 800px) {
+              .column-gallery {
+                -ms-flex: 50%;
+                flex: 47%;
+                max-width: 50%;
+              }
+                .contact {
+                    width: 95%;
+                }
+            }
+            @media screen and (max-width: 600px) {
+              .column-gallery {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+              }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="site-identity">
+                <img id="site-logo" src="img/example-logo.png" alt="Site Logo">
+                <h1 id="site-title">Template Two</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="first-link">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <div class="slideshow">
+            <img id="slideImage" src="img/ocean-banner.jpg" alt="Slideshow">
+        </div>
+        
+        
+        <main>
+            <div class="intro-row">
+                <h1 id="tagline">Text Goes Here to promote website or services</h1>
+
+                <button id="contactButton">Get in touch!</button>
+            </div>
+            
+            <div class="row" id="services">
+                <div class="column">
+                    <div style="text-align: center;">
+                        <img style="max-width: 70px;" src="img/example-logo.png">
+                    </div>
+                    <h2>Photography</h2>
+                    <p>This is text to explain a product or service. This is text to explain a product or service. This is text to explain a product or service</p>
+                </div>
+                <div class="column">
+                    <div style="text-align: center;">
+                        <img style="max-width: 70px;" src="img/example-logo.png">
+                    </div>
+                    <h2>Editing</h2>
+                    <p>This is text to explain a product or service. This is text to explain a product or service. This is text to explain a product or service</p>
+                </div>
+                <div class="column">
+                    <div style="text-align: center;">
+                        <img style="max-width: 70px;" src="img/example-logo.png">
+                    </div>
+                    <h2>Scrapbooks</h2>
+                    <p>This is text to explain a product or service. This is text to explain a product or service. This is text to explain a product or service</p>
+                </div>
+                <div class="column">
+                    <div style="text-align: center;">
+                        <img style="max-width: 70px;" src="img/example-logo.png">
+                    </div>
+                    <h2>And More</h2>
+                    <p>This is text to explain a product or service. This is text to explain a product or service. This is text to explain a product or service</p>
+                </div>
+            </div>
+        
+        
+            <div class="gallery" id="gallery">
+                <h1>Browse My Work:</h1>
+                <div class="row-gallery"> 
+                  <div class="column-gallery">
+                    <img src="img/wedding.jpg" style="width:100%">
+                    <img src="img/rocks.jpg" style="width:100%">
+                    <img src="img/falls2.jpg" style="width:100%">
+                    <img src="img/paris.jpg" style="width:100%">
+                    <img src="img/nature.jpg" style="width:100%">
+                    
+                  </div>
+                  <div class="column-gallery">
+                    <img src="img/underwater.jpg" style="width:100%">
+                    <img src="img/ocean.jpg" style="width:100%">
+                    <img src="img/wedding.jpg" style="width:100%">
+                    <img src="img/mountainskies.jpg" style="width:100%">
+                    <img src="img/rocks.jpg" style="width:100%">
+                    
+                  </div>  
+                  <div class="column-gallery">
+                    <img src="img/wedding.jpg" style="width:100%">
+                    <img src="img/rocks.jpg" style="width:100%">
+                    <img src="img/falls2.jpg" style="width:100%">
+                    <img src="img/paris.jpg" style="width:100%">
+                    <img src="img/nature.jpg" style="width:100%">
+                    
+                  </div>
+                  <div class="column-gallery">
+                    <img src="img/underwater.jpg" style="width:100%">
+                    <img src="img/ocean.jpg" style="width:100%">
+                    <img src="img/wedding.jpg" style="width:100%">
+                    <img src="img/mountainskies.jpg" style="width:100%">
+                    <img src="img/rocks.jpg" style="width:100%">
+                    
+                  </div>
+                </div>
+            </div>
+
+            <div class="contact" id="contact">
+                <h1>Contact Me:</h1>
+                <form action="https://formspree.io/your@email.com" method="POST">
+                    <h2 style="margin-top: 0;">Name:</h2>
+                    <input type="text" name="name">
+                    <h2>E-mail:</h2>
+                    <input type="email" name="_replyto">
+                    <h2>Message:</h2>
+                    <textarea type="text" name="message"></textarea><br>
+                    <input type="submit" value="Send" id="contactSubmit">
+                </form>
+            </div>
+            
+            
+        </main>
+        <footer>
+            <p id="copy">COMPANY - Copyright &copy; <span id="year">YEAR</span></p>
+        </footer>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

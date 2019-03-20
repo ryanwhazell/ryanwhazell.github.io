@@ -11,3 +11,6 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+//Get Year for Footer
+document.getElementById("year").innerHTML = new Date().getFullYear();
