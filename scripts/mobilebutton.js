@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#show").hide();
+    $("#hide").hide();
     
      if ($(window).width() < 700) {
         $(".navlink").hide();
