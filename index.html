@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Ryan's Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hangman test</title>
         <link rel="stylesheet" type="text/css" href="main.css">
         <style>
         </style>
     </head>
     <body>
-        <h1>This is a testing environment. Please disregard it.</h1>
+        <main>
+            <header>
+                <h1>Hello Scoot</h1>
+                <hr>
+            </header>
+            
+            
+            <h2>Hangman game</h2>
+            
+            <!-- Our User Input with max length set to 1 -->
+            <input id="guess" type="text" maxLength="1"><br><br>
+            
+            <!-- The Guess Button -->
+            <button onclick="makeGuess()">Make Guess</button>
+            
+            <!-- I chose to dispaly the answer as a table -->
+            <table>
+                <tr>
+                    <td class="answer">-</td>
+                    <td class="answer">-</td>
+                    <td class="answer">-</td>
+                    <td class="answer">-</td>
+                    <td class="answer">-</td>
+                    <td class="answer">-</td>
+                    <td class="answer">-</td>
+                    <td class="answer">-</td>
+                    <td class="answer">-</td>
+                </tr>
+            </table>
+            <p id="output"></p>
+        </main>
+        
+        
         <script src="main.js"></script>
+        
+        
+        
     </body>
 </html>
