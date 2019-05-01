@@ -2,95 +2,13 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hangman test</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <style>
-            * {
-                font-family: sans-serif;
-            }
-            body {
-                margin: 0;
-            }
-            main {
-                width: 50%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            table {
-                margin-top: 30px;
-            }
-            td {
-                border: 1px solid black;
-                min-width: 10px;
-                text-align: center;
-                padding: 5px;
-            }
-            @media only screen and (max-width: 900px) {
-                main {
-                    width: 95%;
-                }
-            }
-        </style>
+        <title>Ryan Hazell</title>
+        <link type="text/css" rel="stylesheet" href="main.css">
     </head>
     <body>
-        <main>
-            <header>
-                <h1>Hello Scoot</h1>
-                <a href="dropdown.html">Link to drop down test</a>
-                <hr>
-            </header>
-            
-            
-            <h2>Hangman game</h2>
-            
-            <!-- Our User Input with max length set to 1 -->
-            <input id="guess" type="text" maxLength="1"><br><br>
-            
-            <!-- The Guess Button -->
-            <button onclick="makeGuess()">Make Guess</button>
-            
-            <!-- I chose to dispaly the answer as a table -->
-            <table>
-                <tr>
-                    <td class="answer">-</td>
-                    <td class="answer">-</td>
-                    <td class="answer">-</td>
-                    <td class="answer">-</td>
-                    <td class="answer">-</td>
-                    <td class="answer">-</td>
-                    <td class="answer">-</td>
-                    <td class="answer">-</td>
-                    <td class="answer">-</td>
-                </tr>
-            </table>
-            <p id="output"></p>
-        </main>
-        
-        
-        <script>
-            //Our answer is "Pineapple"
-            var answer = ["P", "I", "N", "E", "A", "P", "P", "L", "E"];
-
-            function makeGuess() {
-                //Getting the variable from user input
-                var currentGuess = guess.value;
-
-                /*Creating a for loop, this checks if the letter is in the array*/
-                var i;
-                for (i = 0; i < answer.length; i++) {
-
-                    //If the answer is found in the array, then it breaks from the loop
-                    if (currentGuess == answer[i]) {
-                        var x = document.getElementsByClassName("answer");
-                        x[i].innerHTML = answer[i];
-
-                    }
-                }
-
-            }
-        </script>
-        
-        
-        
+        <h1>Thank you for visiting my personal site.</h1>
+        <p>This space is generally being used for personal testing reasons, but not for anything specific at the moment.</p>
+        <p>If you'd like to get in touch with me to talk about getting a website built for you or your business, feel free to reach out! I have a lot going on during the week by I generally check my mail daily.</p>
+        <p>My e-mail is <a href="mailto:ryanwhazell@gmail.com">ryanwhazell@gmail.com</a>. Cheers!</p>
     </body>
 </html>
