@@ -36,12 +36,22 @@
                 float: left;
                 width: 50%;
                 padding: 20px;
+                padding-left: 0px;
             }
             .cleric-table {
                 width: 100%;
             }
-            main {
-                min-height: 100px;
+            ul {
+                padding-left: 20px;
+            }
+            li {
+                font-size: 18px;
+                color:#72623f;
+            }
+            @media only screen and (max-width: 500px) {
+                .col {
+                    width: 100%;
+                }
             }
         </style>
     </head>
@@ -66,26 +76,36 @@
             <div class="top-row">
                 <div class="col">
                     <h1>Nari</h1>
-                    <h2>Satyr</h2>
-                    <h2>Level 1 Cleric</h2>
-                    <h2>Worshipper of Tymora</h2>
+                    <h3>Satyr</h3>
+                    <h3>Level 1 Cleric</h3>
+                    <h3>Worshipper of Tymora</h3>
+                    <h3>AC: #</h3>
+                    <h3>HP: #</h3>
                 </div>
                 <div class="col">
-                    <h2>AC: #</h2>
-                    <h2>HP: #</h2>
-                    <h2>Weapons:</h2>
-                    <p>Satyr Horns</p>
-                    <p>Dagger</p>
+                    <h3>Size: Medium</h3>
+                    <h3>Age: </h3>
+                    <h3>Height: </h3>
+                    <h3>Weight:</h3>
+                    <h3>Vision: </h3>
+                    <h3>Speed: </h3>
                 </div>
             </div>
-        
-        </main>
-        <div style="text-align: center; width: 100%;">
+            <h3>Weapons:</h3>
+            <ul>
+                <li>Satyr Horns</li>
+                <li>Dagger (1d4)</li>
+            </ul>
+            <br><br>
             <a href="https://www.dandwiki.com/wiki/SRD:Cleric">Click here to view Cleric Class page</a>
             <br><br>
             <a href="https://www.dandwiki.com/wiki/SRD:Cleric_Spell_List">Click here to view Cleric spells</a>
             <br><br>
-            <table>
+        
+        </main>
+        <div style="text-align: center; width: 100%;">
+            
+            <!-- <table>
                 <tr>
                     <th>Level</th>
                     <th>BAB</th>
@@ -443,7 +463,7 @@
                     <td>4+1</td>
                     <td>4+1</td>
                 </tr>
-            </table>
+            </table> -->
         </div>
         
         <footer>
