@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Die Roller - Dungeons &amp; Dragons</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <style>
+            /*Level Table*/
+            .level-table table {
+                min-width: 100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .level-table table tr th {
+                text-align: center;
+                padding: 5px;
+                background-color: #8C7054;
+                color: white;
+            }
+            .level-table table tr td {
+                text-align: center;
+                padding: 5px
+            }
+            td {
+                padding: 15px;
+                text-align: center;
+            }
+            button {
+                background-color: white;
+                border-style: none;
+                padding: 10px;
+            }
+            button:hover {
+                opacity: 0.7;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a class="site-identity" href="index.html">
+                <h1>Dungeons &amp; Dragons</h1>
+            </a>
+        </header>
+        
+        <div class="nav-wrapper">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="notes.html">Campaign Notes</a>
+                <a href="map.html">Map</a>
+                <a href="resources.html">Resources</a>
+                <a href="roller.html">Die Roller</a>
+            </nav>
+        </div>
+        
+        <main>
+            <h1>Die Roller</h1>
+            <table>
+                <tr>
+                    <th>Roll:</th>
+                    <th>Result:</th>
+                </tr>
+                <tr>
+                    <td><button onclick="rolld4()">Roll d4</button></td>
+                    <td id="result4">-</td>
+                </tr>
+                <tr>
+                    <td><button onclick="rolld6()">Roll d6</button></td>
+                    <td id="result6">-</td>
+                </tr>
+                <tr>
+                    <td><button onclick="rolld8()">Roll d8</button></td>
+                    <td id="result8">-</td>
+                </tr>
+                <tr>
+                    <td><button onclick="rolld10()">Roll d10</button></td>
+                    <td id="result10">-</td>
+                </tr>
+                <tr>
+                    <td><button onclick="rolld12()">Roll d12</button></td>
+                    <td id="result12">-</td>
+                </tr>
+                <tr>
+                    <td><button onclick="rolld20()">Roll d20</button></td>
+                    <td id="result20">-</td>
+                </tr>
+            </table>
+        </main>
+        
+        <footer>
+            <p>Dungeon Master: Ryan Hazell</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
