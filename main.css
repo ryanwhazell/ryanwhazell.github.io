@@ -5,7 +5,7 @@
 body {
     margin: 0;
     background-color: #fffdea;
-    background-image: url(images/background.png);
+    /* deactivated for load times background-image: url(images/background.png);*/
 }
 p, h1, h2, h3 {
     color: #72623f;
