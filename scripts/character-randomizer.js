@@ -98,7 +98,7 @@ function generateCharacter() {
         var wisBoost = 0;
         var chaBoost = 0;
         
-        document.getElementById("specialDisplayRace").innerHTML = "You get four extra skill points at Level 1, and 1 extra skill point each level. You also get an extra feat at Level 1. You move at 30 feet."
+        document.getElementById("specialDisplayRace").innerHTML = "You get four extra skill points at Level 1, and 1 extra skill point each level. You also get an extra feat at Level 1. You move at 30 feet.";
     }
     else if (yourRace == 'Elf') {
         var strBoost = 0;
@@ -108,7 +108,7 @@ function generateCharacter() {
         var wisBoost = 0;
         var chaBoost = 0;
         
-        document.getElementById("specialDisplayRace").innerHTML = "You have low-light vision, immunity to sleep effects, and proficiency with longswords, rapiers, longbows, and shortbows. You move at 30 feet."
+        document.getElementById("specialDisplayRace").innerHTML = "You have low-light vision, immunity to sleep effects, and proficiency with longswords, rapiers, longbows, and shortbows. You move at 30 feet.";
     }
     else if (yourRace == 'Half-Elf') {
         var strBoost = 0;
@@ -118,7 +118,7 @@ function generateCharacter() {
         var wisBoost = 0;
         var chaBoost = 0;
         
-        document.getElementById("specialDisplayRace").innerHTML = "You have low-light vision, immunity to sleep effects, and proficiency with longswords, rapiers, longbows, and shortbows. You have Elven as a bonus language. You move at 30 feet."
+        document.getElementById("specialDisplayRace").innerHTML = "You have low-light vision, immunity to sleep effects, and proficiency with longswords, rapiers, longbows, and shortbows. You have Elven as a bonus language. You move at 30 feet.";
     }
     else if (yourRace == 'Aquatic Elf') {
         var strBoost = 0;
@@ -128,7 +128,7 @@ function generateCharacter() {
         var wisBoost = 0;
         var chaBoost = 0;
         
-        document.getElementById("specialDisplayRace").innerHTML = "You are immune to sleep effects and have superior low-light vision. You can survive 1 hour per Constitution point out of water before suffocating, and can breathe underwater indefinitely. Elven is a bonus language. You move at 30 feet and swim at 40 feet."
+        document.getElementById("specialDisplayRace").innerHTML = "You are immune to sleep effects and have superior low-light vision. You can survive 1 hour per Constitution point out of water before suffocating, and can breathe underwater indefinitely. Elven is a bonus language. You move at 30 feet and swim at 40 feet.";
     }
     else if (yourRace == 'Halfling') {
         var strBoost = -2;
@@ -178,23 +178,27 @@ function generateCharacter() {
         var wisBoost = 0;
         var chaBoost = 0;
         
-        document.getElementById("specialDisplayRace").innerHTML = "As a small creature you gain +1 AC, +1 to attack rolls, +4 to hide checks, but use smaller weapons. YOu have low light vision, proficiency with gnome hooked hammers, and have a +2 to all illusions related saving throws. You have a +4 AC against giant types,"
+        document.getElementById("specialDisplayRace").innerHTML = "As a small creature you gain +1 AC, +1 to attack rolls, +4 to hide checks, but use smaller weapons. YOu have low light vision, proficiency with gnome hooked hammers, and have a +2 to all illusions related saving throws. You have a +4 AC against giant types, and a +2 on craft(alchemy) and perception checks. Gnomes have a 1/day spell-like ability 'Speak with Animals' for burrowing mammals only, lasts one minute. Gnomes also get a few 1/day spell-like abilities if they have at least 10 Charisma: Dancing Lights, Ghost Sound, and presidigitation. Movement speed is 20feet.";
     }
     else if (yourRace == 'Tiefling') {
         var strBoost = 0;
-        var dexBoost = 0;
+        var dexBoost = 2;
         var conBoost = 0;
-        var intBoost = 0;
+        var intBoost = 2;
         var wisBoost = 0;
-        var chaBoost = 0;
+        var chaBoost = -2;
+        
+        document.getElementById("specialDisplayRace").innerHTML = "Tielfings are outsiders, and range widly in appearence. You have Darkvision 60 feet, and are proficient with all simple and martial weapons, light armor, and sheilds. Resistence: 5 Cold, 5 Electricity, and 5 Fire. You have a 1/day spell-like ability: Darkness. +2 to bluff and hide checks. 'Infernal' is an automatic language. You move at 30feet.";
     }
     else if (yourRace == 'Aasimar') {
         var strBoost = 0;
         var dexBoost = 0;
         var conBoost = 0;
         var intBoost = 0;
-        var wisBoost = 0;
-        var chaBoost = 0;
+        var wisBoost = 2;
+        var chaBoost = 2;
+        
+        document.getElementById("specialDisplayRace").innerHTML = "Aasimar are outsiders, and vary greatly in appearence. You have Darkvision 60 feet. Resistences: 5 Acid, 5 Cold, 5 Electricity. You are proficient with all simple and martial weapnry, light and medium armor, and shields. You have a 1/day spell-like ability: Daylight. Celestial is an automatic language. You move at 30 feet.";
     }
     else if (yourRace == 'Troll') {
         var strBoost = 0;
@@ -203,6 +207,8 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
     else if (yourRace == 'Minotaur') {
         var strBoost = 0;
@@ -211,6 +217,8 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
     else if (yourRace == 'Gnoll') {
         var strBoost = 0;
@@ -219,6 +227,8 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
     else if (yourRace == 'Half-Giant') {
         var strBoost = 0;
@@ -227,6 +237,8 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
     else if (yourRace == 'Centaur') {
         var strBoost = 0;
@@ -235,6 +247,8 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
     else if (yourRace == 'Azer') {
         var strBoost = 0;
@@ -243,6 +257,8 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
     else if (yourRace == 'Bugbear') {
         var strBoost = 0;
@@ -251,6 +267,8 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
     else if (yourRace == 'Kobold') {
         var strBoost = 0;
@@ -259,6 +277,8 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
     else if (yourRace == 'Goblin') {
         var strBoost = 0;
@@ -267,6 +287,8 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
     else if (yourRace == 'Lizardfolk') {
         var strBoost = 0;
@@ -275,8 +297,9 @@ function generateCharacter() {
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
+        
+        document.getElementById("specialDisplayRace").innerHTML = " ";
     }
-     /*'Human', 'Elf', 'Half-Elf', 'Aquatic Elf', 'Halfling', 'Dwarf', 'Orc', 'Half-Orc', 'Gnome', 'Tiefling', 'Aasimar', 'Troll', 'Minotaur', 'Gnoll', 'Half-Giant', 'Centaur', 'Azer', 'Bugbear', 'Kobold', 'Goblin', 'Lizardfolk'*/
     
     
     //CONDITIONALS BASED ON CLASS
