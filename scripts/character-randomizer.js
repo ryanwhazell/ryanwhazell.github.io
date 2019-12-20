@@ -18,11 +18,11 @@ var ceGods = ['Lolth', 'Cyric', 'Talos', 'Demogorgon', 'Umberlee', 'Malar', 'Bap
 
 var genderArray = ['Male', 'Female'];
 
-var firstTraitArray = ['Outgoing', 'Depressed', 'Sleepy', 'Determined', 'Chatterbox', 'Bully', 'Bossy', 'Bookworm', 'Conspiracy Theorist', 'Ditzy', 'Flamboyant', 'Wise', 'Blood Thirsty', 'Always Bored', 'Compulsive Liar', 'Narcissistic', 'Extermely serious at all times', 'Takes nothing seriously', 'Absolutly gorgeous. Just stunning. 10/10 truly.', 'Has airpods and flexes them frequently.', 'Offputting', 'Shy around girls'];
+var firstTraitArray = ['Outgoing', 'Depressed', 'Sleepy', 'Determined', 'Chatterbox', 'Bully', 'Bossy', 'Bookworm', 'Conspiracy Theorist', 'Ditzy', 'Flamboyant', 'Wise', 'Blood Thirsty', 'Always Bored', 'Compulsive Liar', 'Narcissistic', 'Extermely serious at all times', 'Takes nothing seriously', 'Absolutly gorgeous. Just stunning. 10/10 truly.', 'Has airpods and flexes them frequently.', 'Offputting', 'Shy around girls', 'You get hiccups when surprised', 'Laughs like Fran Drescher', 'Thalassophobia - fear of the sea', 'Writes poetry, but bad at rhyming', 'You play the lute'];
 
 var secondTraitArray = ['Often Grumpy', 'Angry Drunk', 'Ruthless', 'Obsessed with ducks', 'Germophobe', 'Snitch', 'Despises Children', 'Loves to Eat', 'Mordayn Vapor Addiction', 'Grog Addiction', 'Hates Spellcasters', 'Owns a copy of the Book of Vile Darkness in-game', 'Carries around a small pouch of infinite lima beans at all times - will cry if separated from them even for a second', 'Is running for office in the nearest city from starting point', 'Illiterate, and very embaressed about it'];
 
-var visualTrait = ['Missing Left Ear', 'Has Perfect Teeth', 'Mohawk', 'Visually Filthy', 'Scar over Left Eye', 'Missing Right Eye', 'Lost left hand to Zaldur', 'Allergic to Gluten', 'Has six fingers on each hand', 'Massive Beard', '3ft Long Prehensile Monkey Tail', 'Comically Buff', 'Face Tattoos '];
+var visualTrait = ['Missing Left Ear', 'Has Perfect Teeth', 'Mohawk', 'Visually Filthy', 'Scar over Left Eye', 'Missing Right Eye', 'Lost left hand to Zaldur', 'Allergic to Gluten', 'Has six fingers on each hand', 'Massive Beard', '3ft Long Prehensile Monkey Tail', 'Comically Buff', 'Face Tattoos', 'Wears an oversized wizard hat', 'Always smoking from a pipe', 'Carries a stuffed animal around', 'Flip a coin each day to see if you put your shirt on right-side-out', 'Curly Moustache'];
 
 
 
@@ -32,6 +32,13 @@ function generateCharacter() {
     var yourFirstTrait = firstTraitArray[Math.floor(Math.random() * firstTraitArray.length)];
     var yourSecondTrait = secondTraitArray[Math.floor(Math.random() * secondTraitArray.length)];
     var yourThirdTrait = visualTrait[Math.floor(Math.random() * visualTrait.length)];
+    
+    var yourHand = Math.floor(Math.random() * 100);
+    if (yourHand > 90) {
+        document.getElementById("handDisplay").innerHTML = "You are left handed";
+    } else {
+        document.getElementById("handDisplay").innerHTML = "You are right handed";
+    }
     
     document.getElementById("traitOne").innerHTML = "First Trait: " + yourFirstTrait;
     document.getElementById("traitTwo").innerHTML = "Second Trait: " + yourSecondTrait;
