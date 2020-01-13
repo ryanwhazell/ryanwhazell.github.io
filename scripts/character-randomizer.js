@@ -24,6 +24,8 @@ var secondTraitArray = ['Often Grumpy', 'Angry Drunk', 'Ruthless', 'Obsessed wit
 
 var visualTrait = ['Missing Left Ear', 'Has Perfect Teeth', 'Mohawk', 'Visually Filthy', 'Scar over Left Eye', 'Missing Right Eye', 'Lost left hand to Zaldur', 'Allergic to Gluten', 'Has six fingers on each hand', 'Massive Beard', '3ft Long Prehensile Monkey Tail', 'Comically Buff', 'Face Tattoos', 'Wears an oversized wizard hat', 'Always smoking from a pipe', 'Carries a stuffed animal around', 'Flip a coin each day to see if you put your shirt on right-side-out', 'Curly Moustache'];
 
+var goalsArray = ['To create a popular trading card game', 'To become the ruler of a town of at least 1000 residents', 'To become a vampire', 'To become rich', 'To meet a dragon and live to tell the tale', 'To fall in love and retire on a farm', 'To invent your own language and have it become the most commonly used language in the region', 'To become the captain of a great seafaring vessel', 'To create a flying machine', 'To become a famous writer', 'To become a loremaster', 'To invent a sport', 'To become a master chef who cooks with the rarest of monster meats and exotic ingredients', 'To climb the tallest mountain in Faerun', 'To visit the City of Brass', 'To collect legendary artifacts and open up a museum', 'To create a famed religious institution for your diety', 'To become a master blacksmith', 'To travel to every plane at least once', 'To invest steam power and bring about the industrial revolution in the region'];
+
 
 
 
