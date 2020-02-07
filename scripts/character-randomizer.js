@@ -210,24 +210,24 @@ function generateCharacter() {
         document.getElementById("specialDisplayRace").innerHTML = "Aasimar are outsiders, and vary greatly in appearence. You have Darkvision 60 feet. Resistences: 5 Acid, 5 Cold, 5 Electricity. You are proficient with all simple and martial weapnry, light and medium armor, and shields. You have a 1/day spell-like ability: Daylight. Celestial is an automatic language. You move at 30 feet.";
     }
     else if (yourRace == 'Troll') {
-        var strBoost = 0;
-        var dexBoost = 0;
-        var conBoost = 0;
-        var intBoost = 0;
-        var wisBoost = 0;
-        var chaBoost = 0;
+        var strBoost = 12;
+        var dexBoost = 4;
+        var conBoost = 12;
+        var intBoost = -4;
+        var wisBoost = -2;
+        var chaBoost = -4;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "Darkvision 60 feet, and begin with 6d8 racial hit dice as well as a BAB of +4. Your Fortitude gets a +4, Reflex +2, and WIll +2. You gain +5 natural armor AC bonus, and have 2 claws (1d6) and bite (1d6) as natural weapons. You are a Large Size Cateogy, and gain -1 AC, -1 Attack Rolls, and -4 on hide checks as well as +4 on grapples of medium characters. Your base movement is 30 feeet. Visit the Troll Race Page for more information as this race is a more complex than others in this list (But copy the information on this page down before closing this page). +5 Level Adjustment.";
     }
     else if (yourRace == 'Minotaur') {
-        var strBoost = 0;
+        var strBoost = 8;
         var dexBoost = 0;
-        var conBoost = 0;
-        var intBoost = 0;
+        var conBoost = 4;
+        var intBoost = -4;
         var wisBoost = 0;
-        var chaBoost = 0;
+        var chaBoost = -2;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "You have Darkvision 60 feet, and an extraordinary sense of smell. Your 'Natural Cunning' means you are never lost and immune to maze spell effects. You are never caught flat fooded, thus sneak attacks will register as normal attacks. You have gore as natural weapon (1d8) and powerful charge, which deals (4d6 + 1.5 STR Mod). You gain 6d8 racial hit die and a base attack bonus of +6, as well as saving throws of Fort +2, Ref +5, and Will +5. You get +5 perception and insight. You have +5 Natural Armor but being large means -1 AC and BAB, as well as +4 grappling against medium creatures. Base movement is 30 feet unless charging, in which case your movement is doubled that round. +2 Level Adjustment.;
     }
     else if (yourRace == 'Gnoll') {
         var strBoost = 0;
