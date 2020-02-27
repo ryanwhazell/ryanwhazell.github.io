@@ -5,6 +5,18 @@
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="images/favicon.ico">
+        <style>
+            .countup {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                border-radius: 5px;
+            }
+        </style>
     </head>
     <body>
         
@@ -32,6 +44,29 @@
         <main>
             <h1>Quick References:</h1>
             <p style="font-size: 18px;"><a href="Xanathar.html">Click here</a> to view the Xanathar Guide</p>
+            
+            <!-- Jeffie Count Up -->
+            
+            <div class="countup" id="countup1">
+                <h3>It has been</h3>
+                <span class="timeel days">00</span>
+                <span class="timeel timeRefDays">days</span>
+                <span class="timeel hours">00</span>
+                <span class="timeel timeRefHours">hours</span>
+                <span class="timeel minutes">00</span>
+                <span class="timeel timeRefMinutes">minutes</span>
+                <span class="timeel seconds">00</span>
+                <span class="timeel timeRefSeconds">seconds</span>
+                <h3>since Jeff has rolled a new character</h3>
+                <p>Current Character:</p>
+                <ul style="text-align: left;">
+                    <li style="text-decoration: line-through;">Iruka</li>
+                    <li style="text-decoration: line-through;">Tuddles</li>
+                    <li>Casius</li>
+                </ul>
+            </div>
+            
+            
             <h2>3.5e Level Chart:</h2>
             <table class="level-chart">
                 <tr>
@@ -201,5 +236,6 @@
         </footer>
         
         <script src="scripts/main.js"></script>
+        <script src="scripts/count-up.js"></script>
     </body>
 </html>
