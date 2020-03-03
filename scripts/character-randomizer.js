@@ -227,87 +227,87 @@ function generateCharacter() {
         var wisBoost = 0;
         var chaBoost = -2;
         
-        document.getElementById("specialDisplayRace").innerHTML = "You have Darkvision 60 feet, and an extraordinary sense of smell. Your 'Natural Cunning' means you are never lost and immune to maze spell effects. You are never caught flat fooded, thus sneak attacks will register as normal attacks. You have gore as natural weapon (1d8) and powerful charge, which deals (4d6 + 1.5 STR Mod). You gain 6d8 racial hit die and a base attack bonus of +6, as well as saving throws of Fort +2, Ref +5, and Will +5. You get +5 perception and insight. You have +5 Natural Armor but being large means -1 AC and BAB, as well as +4 grappling against medium creatures. Base movement is 30 feet unless charging, in which case your movement is doubled that round. +2 Level Adjustment.;
+        document.getElementById("specialDisplayRace").innerHTML = "You have Darkvision 60 feet, and an extraordinary sense of smell. Your 'Natural Cunning' means you are never lost and immune to maze spell effects. You are never caught flat fooded, thus sneak attacks will register as normal attacks. You have gore as natural weapon (1d8) and powerful charge, which deals (4d6 + 1.5 STR Mod). You gain 6d8 racial hit die and a base attack bonus of +6, as well as saving throws of Fort +2, Ref +5, and Will +5. You get +5 perception and insight. You have +5 Natural Armor but being large means -1 AC and BAB, as well as +4 grappling against medium creatures. Base movement is 30 feet unless charging, in which case your movement is doubled that round. +2 Level Adjustment.";
     }
     else if (yourRace == 'Gnoll') {
-        var strBoost = 0;
+        var strBoost = 4;
         var dexBoost = 0;
-        var conBoost = 0;
-        var intBoost = 0;
+        var conBoost = 2;
+        var intBoost = -2;
         var wisBoost = 0;
-        var chaBoost = 0;
+        var chaBoost = -2;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "You have Darvision 60 feet, you get a +1 Natural AC bonus, and are proficient with simple weapons, the battleaxe, the shortbow, light armor, and shields. You can speak Gnoll, and begin with two levels of 'humanoid', which provides 2d8 hit die, a BAB of +1, and a +3 Fortitude Saving Throw. You get one bonus racial feat, and start with 5 x (2+Int Mod) Skill Points. +1 Level Adjustment.";
     }
     else if (yourRace == 'Half-Giant') {
-        var strBoost = 0;
-        var dexBoost = 0;
-        var conBoost = 0;
+        var strBoost = 2;
+        var dexBoost = -2;
+        var conBoost = 2;
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "You have low light vision,  and are a medium sized creature. Proficient with simple and martial weapons, light and medium armor, and shields.+2 on saving throws against fire. Your 'Powerful Build' lets you function as a large-sized creature for grapples, tripping, bull rishes, and similar checks. If you are a psionic class, you get +2 power points at 1st level. Gain Psi-Like Ability: Stomp, manifester level equal to 1/2 hit die.";
     }
     else if (yourRace == 'Centaur') {
-        var strBoost = 0;
-        var dexBoost = 0;
-        var conBoost = 0;
-        var intBoost = 0;
-        var wisBoost = 0;
+        var strBoost = 8;
+        var dexBoost = 4;
+        var conBoost = 4;
+        var intBoost = -2;
+        var wisBoost = 2;
         var chaBoost = 0;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "You have Darkvision 60 feet, and are a large quadruped (-1 AC, -1 BAB, -4 Hide, +4 Grapple, +4 against bullrushes/trips). You have a reach of 10 feet and a base movement of 50 feet. You start with four mostrous humanoid levels, which provide 4d8 hit dice, +4 BAB, and saving throw bonuses: +1 Fortitude, +4 Reflex, +4 Will. You start with 7 x (2+int) skill points, your class skills are perception, move silent, insight, and survival. You get two extra feats, a +3 Natural Armor Bonus, and a natural attack: 2 Hooves (1d6). Sylvan and Elven are automatic languages. You are proficient with simple weapons, longswords, and longbows including the composite longbow. Leve adjustment +2";
     }
     else if (yourRace == 'Azer') {
-        var strBoost = 0;
-        var dexBoost = 0;
-        var conBoost = 0;
-        var intBoost = 0;
-        var wisBoost = 0;
-        var chaBoost = 0;
+        var strBoost = 2;
+        var dexBoost = 2;
+        var conBoost = 2;
+        var intBoost = 2;
+        var wisBoost = 2;
+        var chaBoost = -2;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "You have Darkvision 60 feet, and move at 30 feet a round. You are a medium size, and start with two levels of outsider (2d8 ht dice, BAB +2, saving throw bonuses Fort +3, Ref +3, and Will +3). You start with skill points equal to 5 x (8 + Int Modifier), and the class skills of Appraise, Climb, Craft, Hide, Jump, Insight, and Perception. You begin with one extra feat, and a +6 natural armor bonus. You ar eproficient with simple weapons, martial weapons, light armor, medium armor, and sheilds. Unarmed attacks deal an extra 1 point of fire damage. Spell resistence equal to 13 + class levels. Immune to fire. Vulnerable to cold. You can speak Common, and Ignan. Level adjustment +4";
     }
     else if (yourRace == 'Bugbear') {
-        var strBoost = 0;
-        var dexBoost = 0;
-        var conBoost = 0;
+        var strBoost = 4;
+        var dexBoost = 2;
+        var conBoost = 2;
         var intBoost = 0;
         var wisBoost = 0;
-        var chaBoost = 0;
+        var chaBoost = -2;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "Class description not added, please look up bonuses";
     }
     else if (yourRace == 'Kobold') {
-        var strBoost = 0;
-        var dexBoost = 0;
-        var conBoost = 0;
+        var strBoost = -4;
+        var dexBoost = 2;
+        var conBoost = -2;
         var intBoost = 0;
         var wisBoost = 0;
         var chaBoost = 0;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "Class description not added, please look up bonuses";
     }
     else if (yourRace == 'Goblin') {
-        var strBoost = 0;
-        var dexBoost = 0;
+        var strBoost = -2;
+        var dexBoost = 2;
         var conBoost = 0;
         var intBoost = 0;
         var wisBoost = 0;
-        var chaBoost = 0;
+        var chaBoost = -2;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "Class description not added, please look up bonuses";
     }
     else if (yourRace == 'Lizardfolk') {
-        var strBoost = 0;
+        var strBoost = 2;
         var dexBoost = 0;
-        var conBoost = 0;
-        var intBoost = 0;
+        var conBoost = 2;
+        var intBoost = -2;
         var wisBoost = 0;
         var chaBoost = 0;
         
-        document.getElementById("specialDisplayRace").innerHTML = " ";
+        document.getElementById("specialDisplayRace").innerHTML = "Class description not added, please look up bonuses";
     }
     
     
