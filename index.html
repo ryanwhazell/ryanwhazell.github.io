@@ -4,7 +4,7 @@
         <title>Ryan Hazell - Aramis Front End Dev Quiz</title>
         <!-- Boostrap CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" href="main.css" type="text/css">
         <style>
             button {
@@ -20,10 +20,17 @@
             
             <!-- pull data from http://aimtell.com/files/sites.json
             -->
-            <p>New jquery code added</p>
-            <table class="table" id="#myTable">
+            
+            <table class="table" id="#table_data">
                 <tr>
                     <th>Content</th>
+                    <th>Content</th>
+                    <th>Content</th>
+                    <th>Content</th>
+                    <th>Content</th>
+                    <th>Content</th>
+                    <th>Content</th>
+                    <th>Content</th>    
                     <th>Content</th>
                     <th>Content</th>
                 </tr>
@@ -36,18 +43,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script>
-            $.ajax({
-                url: 'https://aimtell.com/files/sites.json',
-                dataType: 'json',
-                success: function(data) {
-                    for (var i=0; i<data.length; i++) {
-                        var row = $('<tr><td>' + data[i].id+ '</td><td>' + data[i].name + '</td><td>' + data[i].url + '</td></tr>');
-                        $('#myTable').append(row);
-                    }
-                },
-                error: function(jqXHR, textStatus, errorThrown){
-                    alert('Error: ' + textStatus + ' - ' + errorThrown);
-                }
+            $(document).ready(function(){
+               $.getJSON("https://aimtell.com/files/sites.json", function(data){
+                   var table_data = '';
+                   $.each(data, function(key, value){
+                       table_data += '<tr>'; 
+                       table_data += '<td>'+value.sites.id+'</td>;
+                       table_data += '<td>'+value.sites.uid+'</td>;
+                       table_data += '<td>'+value.sites.url+'</td>;
+                       table_data += '<td>'+value.sites.name+'</td>;
+                       table_data += '<td>'+value.sites.icon+'</td>;
+                       table_data += '<td>'+value.sites.promptId+'</td>;
+                       table_data += '<td>'+value.sites.webPushID+'</td>;
+                       table_data += '<td>'+value.sites.auto_prompt+'</td>;
+                       table_data += '<td>'+value.sites.createdAt+'</td>;
+                       table_data += '<td>'+value.sites.active+'</td>;
+                       table_data += '</tr>';
+                   });
+                   $('#table_data').append(table_data);
+               }) ;
             });
         </script>
     </body>
