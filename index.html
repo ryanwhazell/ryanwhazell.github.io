@@ -68,7 +68,15 @@
                 var xhr = new XMLHttpRequest();
                 
                 // OPEN  - type, url,  and asyncronous or not
-                console.log(xhr);
+                xhr.open('GET', 'sample.text', true);
+                
+                xhr.onload = function(){
+                    if(this.status == 200){
+                        console.log(this.responseText);
+                    }
+                }
+                // Sends request
+                xhr.send();
             }
         </script>
     </body>
