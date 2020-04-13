@@ -22,11 +22,11 @@
             
             <button id="button" type="button" class="btn btn-primary">Load Data</button>
             
-            <table class="table" id="tableHead">
+            <table class="table">
                 <thead>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>url</th>
+                    <th scope=col>id</th>
+                    <th scope=col>name</th>
+                    <th scope=col>url</th>
                 </thead>
                 <tbody id="tableBody"></tbody>
             </table>
@@ -61,7 +61,7 @@
                         var i = 0;
                         
                         for(i = 0; i<file.sites.length; i++){
-                            output += '<tr>' +'<td>'+file.sites[i].id+'</td>'+'<td>'+file.sites[i].name+'</td>'+'<td>'+file.sites[i].url+'</td>'+ '</tr>';
+                            output += '<tr>' +'<th>'+file.sites[i].id+'</th>'+'<td>'+file.sites[i].name+'</td>'+'<td>'+file.sites[i].url+'</td>'+ '</tr>';
                         }
                         
                         document.getElementById("tableBody").innerHTML = output;
