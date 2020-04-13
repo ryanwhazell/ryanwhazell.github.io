@@ -22,7 +22,7 @@
             
             
             <button id="button" type="button" class="btn btn-primary">Load Data</button>
-            <p>Button currently loaded to do a test click on console.log</p>
+            <p>Button set to display sample.txt in console log</p>
             
             <!-- pull data from http://aimtell.com/files/sites.json
             enable cross-origin resource sharing
@@ -68,7 +68,7 @@
                 var xhr = new XMLHttpRequest();
                 
                 // OPEN  - type, url,  and asyncronous or not
-                xhr.open('GET', 'sample.text', true);
+                xhr.open('GET', 'sample.txt', true);
                 
                 xhr.onload = function(){
                     if(this.status == 200){
