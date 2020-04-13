@@ -68,11 +68,11 @@
                 var xhr = new XMLHttpRequest();
                 
                 // OPEN  - type, url,  and asyncronous or not
-                xhr.open('GET', 'main.jason', true);
+                xhr.open('GET', 'main.json', true);
                 
                 xhr.onload = function(){
                     if(this.status == 200){
-                        console.log(this.responseText); //This is pulling from the URL in the XHR.open line
+                        console.log(this.responseText); //This is pulling from the URL in the XHR.open line 
                         document.getElementById("demo").innerHTML = "This responds to AJAX"; //uses written text
                     }
                 }
