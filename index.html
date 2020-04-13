@@ -73,7 +73,12 @@
                 xhr.onload = function(){
                     if(this.status == 200){
                         console.log(this.responseText);
+                        document.getElementById("demo").innerHTML = "This responds to AJAX";
                     }
+                }
+                
+                xhr.onerror = function(){
+                    console.log("Request Error");
                 }
                 // Sends request
                 xhr.send();
