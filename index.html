@@ -64,7 +64,12 @@
                     if(this.status == 200){
                         //This is pulling from the URL in the XHR.open line
                         var file = JSON.parse(this.responseText);
-                        console.log(file.sites); 
+                        
+                        var output = '';
+                        
+                        output += '<td>'+file.sites.id+'</td>';
+                        
+                        document.getElementById("tableBody").innerHTML = output;
                     }
                 }
                 
