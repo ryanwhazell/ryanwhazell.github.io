@@ -19,48 +19,17 @@
             <button type="button" class="btn btn-primary">Load Data</button>
             
             <!-- pull data from http://aimtell.com/files/sites.json
+            enable cross-origin resource sharing
             -->
             
-            <p>json</p>
-            
-            <table class="table" id="#table_data">
-                <tr>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>    
-                    <th>Content</th>
-                    <th>Content</th>
-                </tr>
-            </table>
-            
-            <table id="example" class="display" style="width:100%">
+            <tabe id="tableHead">
                 <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Extn.</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
+                    <th>Col One</th>
+                    <th>Col Two</th>
+                    <th>Col Three</th>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Extn.</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
+                <tbody id="myTable"></tbody>
+            </tabe>
         
         
         <!-- Scripts -->
@@ -88,11 +57,15 @@
                    $('#table_data').append(table_data);
                }) ;
             });*/
-            $(document).ready(function() {
-                $('#example').DataTable( {
-                    "ajax": 'https://aimtell.com/files/sites.json'
-                } );
-            } );
+            $.getJSON('http://aimtell.com/files/sites.json',
+                function(data){
+                $(data).each(function(i, entry){
+                    $('#myTable').append($("<tr>")
+                        .append($("<td>").append(entry.sites.id))
+                        .append($("<td>").append(entry.sites.uid))
+                        .append($("<td>").append(entry.sites.name)));
+                });
+            });
         </script>
     </body>
 </html>
