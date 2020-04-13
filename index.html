@@ -21,16 +21,9 @@
             <!-- pull data from http://aimtell.com/files/sites.json
             -->
             
-            <table class="table" id="#table_data">
+            <table class="table" id="#myTable">
                 <tr>
                     <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>
-                    <th>Content</th>    
                     <th>Content</th>
                     <th>Content</th>
                 </tr>
@@ -43,7 +36,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script>
-            $(document).ready(function(){
+            /*$(document).ready(function(){
                $.getJSON("https://aimtell.com/files/sites.json", function(data){
                    var table_data = '';
                    $.each(data, function(key, value){
@@ -62,6 +55,20 @@
                    });
                    $('#table_data').append(table_data);
                }) ;
+            });*/
+            
+            $.ajax({
+                url: 'https://aimtell.com/files/sites.json',
+                dataType: 'json',
+                success: function(data) {
+                    for (var i=0; i<data.length; i++) {
+                        var row = $('<tr><td>' + data[i].id+ '</td><td>' + data[i].name + '</td><td>' + data[i].url + '</td></tr>');
+                        $('#myTable').append(row);
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    alert('Error: ' + textStatus + ' - ' + errorThrown);
+                }
             });
         </script>
     </body>
