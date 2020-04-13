@@ -66,14 +66,16 @@
                         var file = JSON.parse(this.responseText);
                         
                         console.log(file.sites[0].id);
+                        console.log(file.sites[0].name);
+                        console.log(file.sites[0].url);
                         
                         var output = '';
                         
                         for(var i in file){
                             output += '<tr>' +
-                                '<td>'+file.sites[i]+'</td>'
-                                '<td>'+file.sites[i]+'</td>'
-                                '<td>'+file.sites[i]+'</td>'
+                                '<td>'+file.sites[i].id+'</td>'+
+                                '<td>'+file.sites[i].name+'</td>'+
+                                '<td>'+file.sites[i].url+'</td>'
                                 + '</tr>';
                         }
                         
