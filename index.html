@@ -24,15 +24,12 @@
             <button id="button" type="button" class="btn btn-primary">Load Data</button>
             <p>Button set to:</p>
             
-            <!-- pull data from http://aimtell.com/files/sites.json
-            enable cross-origin resource sharing
-            -->
             
-            <table id="tableHead">
+            <table class="table" id="tableHead">
                 <thead>
-                    <th>Col One</th>
-                    <th>Col Two</th>
-                    <th>Col Three</th>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>url</th>
                 </thead>
                 <tbody id="tableBody"></tbody>
             </table>
@@ -41,33 +38,26 @@
             
         </div>
         
-        <!-- Ignoring Bootstrap's slim version of jQuery
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- Scripts -->
         <script>
             
-            //Following code made from https://www.youtube.com/watch?v=82hnvUYY6QA&feature=youtu.be
         
             document.getElementById('button').addEventListener
             ('click', loadText);
             
             function loadText(){
-                //create XHR object
+                
                 var xhr = new XMLHttpRequest();
                 
-                // OPEN  - type, url,  and asyncronous or not
+                
                 xhr.open('GET', 'main.json', true);
                 
                 xhr.onload = function(){
                     if(this.status == 200){
-                        //This is pulling from the URL in the XHR.open line
-                        var file = JSON.parse(this.responseText);
                         
-                        console.log(file.sites[0].id);
-                        console.log(file.sites[0].name);
-                        console.log(file.sites[0].url);
+                        var file = JSON.parse(this.responseText);
                         
                         var output = '';
                         
