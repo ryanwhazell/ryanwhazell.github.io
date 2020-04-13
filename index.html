@@ -47,16 +47,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- Scripts -->
         <script>
-            /*$.getJSON('main.json',
-                function(data){
-                $(data).each(function(i, entry){
-                    $('#tableBody').append($("<tr>")
-                        .append($("<td>").append(entry.sites.id))
-                        .append($("<td>").append(entry.sites.uid))
-                        .append($("<td>").append(entry.sites.name)));
-                });
-            });/*
-            /*Note - request error occurs locally*/
             
             //Following code made from https://www.youtube.com/watch?v=82hnvUYY6QA&feature=youtu.be
         
@@ -73,8 +63,8 @@
                 xhr.onload = function(){
                     if(this.status == 200){
                         //This is pulling from the URL in the XHR.open line
-                        var file = this.responseText;
-                        console.log(file.count); 
+                        var file = JSON.parse(this.responseText);
+                        console.log(file.sites); 
                     }
                 }
                 
