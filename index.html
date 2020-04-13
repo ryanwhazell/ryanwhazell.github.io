@@ -72,7 +72,8 @@
                 
                 xhr.onload = function(){
                     if(this.status == 200){
-                        console.log(this.responseText); //This is pulling from the URL in the XHR.open line 
+                        var ryan = this.myName;
+                        console.log(ryan); //This is pulling from the URL in the XHR.open line 
                         document.getElementById("demo").innerHTML = "This responds to AJAX"; //uses written text
                     }
                 }
