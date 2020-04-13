@@ -65,13 +65,19 @@
                         //This is pulling from the URL in the XHR.open line
                         var file = JSON.parse(this.responseText);
                         
-                        console.log(file.sites.JSON.parse(id));
+                        console.log(file.sites);
                         
-                        /*var output = '';
+                        var output = '';
                         
-                        output += '<td>'+file.sites.id+'</td>';
+                        for(var i in file){
+                            output += '<tr>' +
+                                '<td>'+file.sites.id+'</td>'
+                                '<td>'+file.sites.name+'</td>'
+                                '<td>'+file.sites.url+'</td>'
+                                + '</tr>';
+                        }
                         
-                        document.getElementById("tableBody").innerHTML = output;*/
+                        document.getElementById("tableBody").innerHTML = output;
                     }
                 }
                 
