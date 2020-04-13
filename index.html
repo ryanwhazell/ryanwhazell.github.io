@@ -18,9 +18,11 @@
     <body>
         <div class="container">
             <h1 class="header">Aramis Front End Developer Quiz - Ryan Hazell</h1>
+            <p id="demo"></p>
             
             
-            <button type="button" class="btn btn-primary">Load Data</button>
+            <button id="button" type="button" class="btn btn-primary">Load Data</button>
+            <p>Button currently loaded to do a test click on console.log</p>
             
             <!-- pull data from http://aimtell.com/files/sites.json
             enable cross-origin resource sharing
@@ -45,7 +47,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- Scripts -->
         <script>
-            $.getJSON('main.json',
+            /*$.getJSON('main.json',
                 function(data){
                 $(data).each(function(i, entry){
                     $('#tableBody').append($("<tr>")
@@ -53,8 +55,21 @@
                         .append($("<td>").append(entry.sites.uid))
                         .append($("<td>").append(entry.sites.name)));
                 });
-            });
+            });/*
             /*Note - request error occurs locally*/
+            
+            //Following code made from https://www.youtube.com/watch?v=82hnvUYY6QA&feature=youtu.be
+        
+            document.getElementById("button").addEventListener
+            ('click', loadText);
+            
+            function loadText(){
+                //create XHR object
+                var hxr = new XMLHttpRequest();
+                
+                // OPEN  - type, url,  and asyncronous or not
+                console.log(xhr);
+            }
         </script>
     </body>
 </html>
