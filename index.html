@@ -4,18 +4,22 @@
         <title>Ryan Hazell - Aramis Front End Dev Quiz</title>
         <!-- Boostrap CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" href="main.css" type="text/css">
         <style>
             button {
                 margin-bottom: 10px;
             }
         </style>
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
         
     </head>
     <body>
         <div class="container">
             <h1 class="header">Aramis Front End Developer Quiz - Ryan Hazell</h1>
+            
+            
             <button type="button" class="btn btn-primary">Load Data</button>
             
             <!-- pull data from http://aimtell.com/files/sites.json
@@ -28,14 +32,18 @@
                     <th>Col Two</th>
                     <th>Col Three</th>
                 </thead>
-                <tbody id="myTable"></tbody>
+                <tbody id="tableBody"></tbody>
             </tabe>
         
         
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            
+        </div>
+        
+        <!-- Ignoring Bootstrap's slim version of jQuery
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- Scripts -->
         <script>
             /*$(document).ready(function(){
                $.getJSON("https://aimtell.com/files/sites.json", function(data){
@@ -60,7 +68,7 @@
             $.getJSON('http://aimtell.com/files/sites.json',
                 function(data){
                 $(data).each(function(i, entry){
-                    $('#myTable').append($("<tr>")
+                    $('#tableBody').append($("<tr>")
                         .append($("<td>").append(entry.sites.id))
                         .append($("<td>").append(entry.sites.uid))
                         .append($("<td>").append(entry.sites.name)));
