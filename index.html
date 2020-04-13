@@ -63,9 +63,9 @@
                 xhr.onload = function(){
                     if(this.status == 200){
                         //This is pulling from the URL in the XHR.open line
-                        var file = JSON.stringify(this.responseText);
+                        var file = JSON.parse(this.responseText);
                         
-                        console.log(file.sites.id);
+                        console.log(file.sites.JSON.parse(id));
                         
                         /*var output = '';
                         
