@@ -45,27 +45,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- Scripts -->
         <script>
-            /*$(document).ready(function(){
-               $.getJSON("https://aimtell.com/files/sites.json", function(data){
-                   var table_data = '';
-                   $.each(data, function(key, value){
-                       table_data += '<tr>'; 
-                       table_data += '<td>'+value.sites.id+'</td>;
-                       table_data += '<td>'+value.sites.uid+'</td>;
-                       table_data += '<td>'+value.sites.url+'</td>;
-                       table_data += '<td>'+value.sites.name+'</td>;
-                       table_data += '<td>'+value.sites.icon+'</td>;
-                       table_data += '<td>'+value.sites.promptId+'</td>;
-                       table_data += '<td>'+value.sites.webPushID+'</td>;
-                       table_data += '<td>'+value.sites.auto_prompt+'</td>;
-                       table_data += '<td>'+value.sites.createdAt+'</td>;
-                       table_data += '<td>'+value.sites.active+'</td>;
-                       table_data += '</tr>';
-                   });
-                   $('#table_data').append(table_data);
-               }) ;
-            });*/
-            $.getJSON('http://aimtell.com/files/sites.json',
+            $.getJSON('main.json',
                 function(data){
                 $(data).each(function(i, entry){
                     $('#tableBody').append($("<tr>")
@@ -74,6 +54,7 @@
                         .append($("<td>").append(entry.sites.name)));
                 });
             });
+            /*Note - request error occurs locally*/
         </script>
     </body>
 </html>
