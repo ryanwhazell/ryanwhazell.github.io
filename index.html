@@ -18,11 +18,11 @@
     <body>
         <div class="container">
             <h1 class="header">Aramis Front End Developer Quiz - Ryan Hazell</h1>
-            <p id="demo"></p>
+            <p id="demo">DEMO OUTPUT</p>
             
             
             <button id="button" type="button" class="btn btn-primary">Load Data</button>
-            <p>Button set to display sample.txt in console log</p>
+            <p>Button set to:</p>
             
             <!-- pull data from http://aimtell.com/files/sites.json
             enable cross-origin resource sharing
@@ -68,12 +68,12 @@
                 var xhr = new XMLHttpRequest();
                 
                 // OPEN  - type, url,  and asyncronous or not
-                xhr.open('GET', 'sample.txt', true);
+                xhr.open('GET', 'main.jason', true);
                 
                 xhr.onload = function(){
                     if(this.status == 200){
-                        console.log(this.responseText);
-                        document.getElementById("demo").innerHTML = "This responds to AJAX";
+                        console.log(this.responseText); //This is pulling from the URL in the XHR.open line
+                        document.getElementById("demo").innerHTML = "This responds to AJAX"; //uses written text
                     }
                 }
                 
