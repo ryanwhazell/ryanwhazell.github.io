@@ -73,8 +73,8 @@
                 xhr.onload = function(){
                     if(this.status == 200){
                         //This is pulling from the URL in the XHR.open line
-                        var ryan = this.responseText;
-                        console.log(ryan.myName); 
+                        var file = this.responseText;
+                        console.log(file.sites); 
                     }
                 }
                 
