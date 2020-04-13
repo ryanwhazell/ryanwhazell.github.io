@@ -63,15 +63,15 @@
                 xhr.onload = function(){
                     if(this.status == 200){
                         //This is pulling from the URL in the XHR.open line
-                        var file = JSON.parse(this.responseText);
+                        var file = JSON.stringify(this.responseText);
                         
-                        console.log(JSON.parse(file.sites.id));
+                        console.log(file.sites.id);
                         
-                        var output = '';
+                        /*var output = '';
                         
                         output += '<td>'+file.sites.id+'</td>';
                         
-                        document.getElementById("tableBody").innerHTML = output;
+                        document.getElementById("tableBody").innerHTML = output;*/
                     }
                 }
                 
