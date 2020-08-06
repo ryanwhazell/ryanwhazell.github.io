@@ -23,7 +23,6 @@ body {
 #SO1, #SO2 {
     max-width: 70px;
     min-height: 32px;
-    padding: 5;
     margin: 0;
 }
 select {
@@ -84,5 +83,4 @@ hr {
     .card {
         padding: 20px;
     }
-
 }

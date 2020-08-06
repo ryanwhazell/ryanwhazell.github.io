@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ryan Hazell - Tek Visions Assessment</title>
+        <title>Ryan Hazell - Tex Visions Assessment</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
@@ -17,7 +18,7 @@
                     <form onsubmit="validate();return false">
                         <input id="SO1" placeholder="000"> <span>-</span> <input id="SO2" placeholder="000"> <span>-</span>
                         <select id="SO3">
-                            <option value="blank"> </option>
+                            <option value="blank" label=" "></option>
                             <option value="SO">SO</option>
                             <option value="SI">SI</option>
                         </select>
@@ -39,11 +40,11 @@
                                 <div class="col-md-6">
                                     <p>Card number<span class="required-field">*</span></p>
                                     <input id="cardNum" placeholder="1111222233334444" oninput="changeCard()">
-                                    <img id="cardImage" src="https://www.texvisions.com/design_tool/data/test_logos/blank_card.png">
+                                    <img id="cardImage" alt="Credit Card Image" src="https://www.texvisions.com/design_tool/data/test_logos/blank_card.png">
                                 </div>
                                 <div class="col-md-6">
                                     <p>CVV2<span class="required-field">*</span></p>
-                                    <input id="cvv" placeholder="000"><span style="padding: 10px;"><a href="#">What is cvv2</a></span>
+                                    <input id="cvv" placeholder="000"><span style="padding: 10px;"><a onclick="cvvExplain()" href="#">What is cvv2</a></span>
                                 </div>
                             </div>
 

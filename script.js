@@ -1,3 +1,6 @@
+function cvvExplain() {
+    alert("For Visa, MasterCard, and Discover: This number is printed in the signature area on the back of the card. It is the 3 digits AFTER the credit card number. \n\nFor American Express: CVV is on the front of the card above he credit card number (either on the right or on the left side of the credit card).");
+}
 function resetForm() {
     document.getElementById("errorOutput").innerHTML =" ";
     document.getElementById("receipt").innerHTML =" ";
