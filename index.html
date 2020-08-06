@@ -1,83 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <title>Ryan Hazell - Front End Dev Quiz</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ryan Hazell - Tek Visions Assessment</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <style>
-            button {
-                margin-bottom: 10px;
-            }
-            h1 {
-                text-align: center;
-            }
-        </style>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        
-        
+        <link rel="stylesheet" type="text/css" href="main.css">
     </head>
+    
     <body>
-        <div class="container">
-            <h1 class="header">Aimtell/PushPros Front End Developer Quiz - Ryan Hazell</h1>
-            
-            <div class="text-right">
-                <button id="button" type="button" class="btn btn-primary">Load Data</button>
+        <main>
+            <h1 class="page-title">Make a Payment</h1>
+            <div class="row">
+                <div class="card col-xl-7">
+                    <h3>Sales Order Number / Invoice Number</h3>
+                    <p>Your invoice/order number is 10 characters long and ends with SO or SI. It can be found at the top of your order confirmation or invoice statement. Enter the 10 characters including underscores (ex: 000_000_SO or 000_000_SI). Do not include revision numbers.</p>
+                    <form onsubmit="validate();return false">
+                        <input id="SO1" placeholder="000"> <span>-</span> <input id="SO2" placeholder="000"> <span>-</span>
+                        <select id="SO3">
+                            <option value="blank"> </option>
+                            <option value="SO">SO</option>
+                            <option value="SI">SI</option>
+                        </select>
+
+                        <h3>Amount:</h3>
+                        <p>Enter the total amount of your order/invoice payment as indicated on your order confirmation or invoice. Please enter this value without using commas.</p>
+                        <input id="amount" placeholder="0.00">
+
+                        <h3>Send receipt to:</h3>
+                        <input type="email" id="email" placeholder="someone@email.com" required>
+
+                        <hr>
+
+                        <!-- Card Information -->
+                        <h3>New Card</h3>
+                        <div class="card-info">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Card number<span class="required-field">*</span></p>
+                                    <input id="cardNum" placeholder="1111222233334444" oninput="changeCard()">
+                                    <img id="cardImage" src="https://www.texvisions.com/design_tool/data/test_logos/blank_card.png">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>CVV2<span class="required-field">*</span></p>
+                                    <input id="cvv" placeholder="000"><span style="padding: 10px;"><a href="#">What is cvv2</a></span>
+                                </div>
+                            </div>
+
+
+                            <p>Valid Thru (mm/yy)<span class="required-field">*</span></p>
+                            <input id="exMonth" placeholder="MM"> / <input id="exYear" placeholder="YY">
+
+                            <p>Cardholder's name<span class="required-field">*</span></p>
+                            <input id="name" placeholder="Name">
+                        </div>
+
+
+
+                        <br><br><br>
+                        <input class="btn btn-primary" type="submit" value="Pay">
+
+
+                        <!-- Output -->
+                        <div id="errorStyle">
+                            <p id="errorOutput"></p>
+
+                            <p id="SOoutput"></p>
+                            <p id="AMToutput"></p>
+                            <p id="CardOutput"></p>
+                            <p id="cvvOutput"></p>
+                            <p id="DateOutput"></p>
+                            <p id="nameOutput"></p>
+
+                        </div>
+
+                        <p id="receipt"></p>
+                        <input class="btn btn-primary" type="reset" onclick="resetForm()" id="anotherPayment" value="Make Another Payment" style="display:none;">
+
+                    </form>
+                </div>
+                <div class="col-xl-5">
+                    <p>We make it easy to pay sales orders and invoices online. All major credit cards are accepted including Visa, MasterCard, Discover and American Express.</p>
+                    <p>Fill out the required fields below or log into your account to use a saved credit card. Then, click the 'Pay' button. Be sure to only click the 'Pay' button once to guarantee your credit card is not charged multiple times.</p>
+                    <p>Once your payment has been submitted, you will receive a confirmation by e-mail.</p>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-3"><img class="card-images" src="https://www.texvisions.com/design_tool/data/test_logos/visa.png" alt="Visa"></div>
+                        <div class="col-3"><img class="card-images" src="https://www.texvisions.com/design_tool/data/test_logos/mastercard.png" alt="Master Card"></div>
+                        <div class="col-3"><img class="card-images" src="https://www.texvisions.com/design_tool/data/test_logos/amex.png" alt="American Express"></div>
+                        <div class="col-3"><img class="card-images" src="https://www.texvisions.com/design_tool/data/test_logos/discover.png" alt="Discover"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6" style="text-align: center;"><img class="card-images" src="https://www.texvisions.com/design_tool/data/test_logos/authorize_net.gif" alt="Authorize.net Logo"></div>
+                        <div class="col-6" style="text-align: center;"><img class="card-images" src="https://www.texvisions.com/design_tool/data/test_logos/comodo-trusted-site-seal.png" alt="Comodo Trusted Site Logo"></div>
+                    </div>
+                </div>
             </div>
-            
-            
-            <table class="table table-responsive-sm">
-                <thead>
-                    <th scope=col>id</th>
-                    <th scope=col>name</th>
-                    <th scope=col>url</th>
-                </thead>
-                <tbody id="tableBody"></tbody>
-            </table>
+        </main>
         
-        
-            
-        </div>
-        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <!-- Scripts -->
-        <script>
-            
-        
-            document.getElementById('button').addEventListener
-            ('click', loadText);
-            
-            function loadText(){
-                
-                var xhr = new XMLHttpRequest();
-                
-                
-                xhr.open('GET', 'https://aimtell.com/files/sites.json', true);
-                
-                xhr.onload = function(){
-                    if(this.status == 200){
-                        
-                        var file = JSON.parse(this.responseText);
-                        
-                        var output = '';
-                        
-                        var i = 0;
-                        
-                        for(i = 0; i<file.sites.length; i++){
-                            output += '<tr>' +'<th>'+file.sites[i].id+'</th>'+'<td>'+file.sites[i].name+'</td>'+'<td>'+file.sites[i].url+'</td>'+ '</tr>';
-                        }
-                        
-                        document.getElementById("tableBody").innerHTML = output;
-                    }
-                }
-                
-                xhr.onerror = function(){
-                    console.log("Request Error");
-                }
-                
-                xhr.send();
-            }
-        </script>
+        <script src="script.js"></script>
     </body>
+    
 </html>
