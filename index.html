@@ -14,9 +14,9 @@
             <div class="row">
                 <div class="card col-xl-7">
                     <h3>Sales Order Number / Invoice Number</h3>
-                    <p>Your invoice/order number is 10 characters long and ends with SO or SI. It can be found at the top of your order confirmation or invoice statement. Enter the 10 characters including underscores (ex: 000_000_SO or 000_000_SI). Do not include revision numbers.</p>
+                    <p>Your invoice/order number is 10 characters long and ends with SO or SI. It can be found at the top of your order confirmation or invoice statement. Enter the 10 characters (ex: 000-000-SO or 000-000-SI). Do not include revision numbers.</p>
                     <form onsubmit="validate();return false">
-                        <input id="SO1" placeholder="000"> <span>-</span> <input id="SO2" placeholder="000"> <span>-</span>
+                        <input id="SO1" placeholder="000" maxlength="3" required> <span>-</span> <input id="SO2" placeholder="000" maxlength="3" required> <span>-</span>
                         <select id="SO3" onchange="getAmount()">
                             <option value="blank" label=" "></option>
                             <option value="SO">SO</option>
@@ -25,7 +25,7 @@
 
                         <h3>Amount:</h3>
                         <p>Enter the total amount of your order/invoice payment as indicated on your order confirmation or invoice. Please enter this value without using commas.</p>
-                        <input id="amount" placeholder="0.00">
+                        <input id="amount" placeholder="0.00" required>
 
                         <h3>Send receipt to:</h3>
                         <input type="email" id="email" placeholder="someone@email.com" required>
@@ -35,31 +35,32 @@
                         <!-- Card Information -->
                         <h3>New Card</h3>
                         <div class="card-info">
-
+                            
+                            <p>Cardholder's name<span class="required-field">*</span></p>
+                            <input id="name" placeholder="Name" required>
+                            
                             <div class="row">
                                 <div class="col-md-6">
                                     <p>Card number<span class="required-field">*</span></p>
-                                    <input id="cardNum" placeholder="1111222233334444" oninput="changeCard()">
+                                    <input id="cardNum" placeholder="1111222233334444" oninput="changeCard()" required>
                                     <img id="cardImage" alt="Credit Card Image" src="https://www.texvisions.com/design_tool/data/test_logos/blank_card.png">
                                 </div>
                                 <div class="col-md-6">
                                     <p>CVV2<span class="required-field">*</span></p>
-                                    <input id="cvv" placeholder="000"><span style="padding: 10px;"><a onclick="cvvExplain()" href="#">What is cvv2</a></span>
+                                    <input id="cvv" placeholder="000" required><span style="padding: 10px;"><a onclick="cvvExplain()" href="#">What is cvv2</a></span>
                                 </div>
                             </div>
 
 
-                            <p>Valid Thru (mm/yy)<span class="required-field">*</span></p>
-                            <input id="exMonth" placeholder="MM"> / <input id="exYear" placeholder="YY">
-
-                            <p>Cardholder's name<span class="required-field">*</span></p>
-                            <input id="name" placeholder="Name">
+                            <p>Card Expiration Date (mm/yy)<span class="required-field">*</span></p>
+                            <input id="exMonth" placeholder="MM" required> / <input id="exYear" placeholder="YY" required>
+                            
                         </div>
 
 
 
                         <br><br><br>
-                        <input class="btn btn-primary" type="submit" value="Pay">
+                        <input class="btn btn-primary" type="submit" value="Submit Payment">
 
 
                         <!-- Output -->
@@ -82,7 +83,7 @@
                 </div>
                 <div class="col-xl-5">
                     <p>We make it easy to pay sales orders and invoices online. All major credit cards are accepted including Visa, MasterCard, Discover and American Express.</p>
-                    <p>Fill out the required fields below or log into your account to use a saved credit card. Then, click the 'Pay' button. Be sure to only click the 'Pay' button once to guarantee your credit card is not charged multiple times.</p>
+                    <p>Fill out the required fields on this page or log into your account to use a saved credit card. Then, click the 'Submit Payment' button. Be sure to only click the 'Submit Payment' button once to guarantee your credit card is not charged multiple times.</p>
                     <p>Once your payment has been submitted, you will receive a confirmation by e-mail.</p>
                     <div class="row" style="margin-bottom: 20px;">
                         <div class="col-3"><img class="card-images" src="https://www.texvisions.com/design_tool/data/test_logos/visa.png" alt="Visa"></div>
