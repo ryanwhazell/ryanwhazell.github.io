@@ -17,7 +17,7 @@
                     <p>Your invoice/order number is 10 characters long and ends with SO or SI. It can be found at the top of your order confirmation or invoice statement. Enter the 10 characters including underscores (ex: 000_000_SO or 000_000_SI). Do not include revision numbers.</p>
                     <form onsubmit="validate();return false">
                         <input id="SO1" placeholder="000"> <span>-</span> <input id="SO2" placeholder="000"> <span>-</span>
-                        <select id="SO3">
+                        <select id="SO3" onchange="getAmount()">
                             <option value="blank" label=" "></option>
                             <option value="SO">SO</option>
                             <option value="SI">SI</option>
@@ -102,6 +102,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <script>
+            function getAmount() {
+                //XHR Object
+                var xhr = new XMLHttpRequest();
+                //open request
+                xhr.open('GET', 'https://www.random.org/integers/?num=1&amp;min=1&amp;max=500&amp;col=1&amp;base=10&amp;format=plain&amp;rnd=new', true);
+                xhr.onload = function() {
+                    if(this.status == 200) {
+                        //Good request
+                        console.log(this.responseText);
+                    }
+                }
+                //sends request
+                xhr.send();
+            }
+        </script>
     </body>
     
 </html>
