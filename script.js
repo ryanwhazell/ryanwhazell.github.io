@@ -1,3 +1,53 @@
+//Global Variables:
+var salesOrder1;
+var salesOrder2;
+var salesOrder3;
+var validOrder = false;
+
+function getAmount() {
+    
+    salesOrder1 = document.getElementById("SO1").value;
+    salesOrder2 = document.getElementById("SO2").value;
+    salesOrder3 = document.getElementById("SO3").value;
+    
+    if (isNaN(salesOrder1) || isNaN(salesOrder2)) {
+        validOrder = false;
+        console.log(validOrder + "1");
+    } else if (salesOrder1 == 0 && salesOrder2 == 0) {
+        validOrder = false;
+        console.log(validOrder + "2");
+    } else if (salesOrder1 < 0 || salesOrder2 < 0) {
+        validOrder = false;
+        console.log(validOrder + "3");
+    } else if (salesOrder1 > 999 || salesOrder2 > 999) {
+        validOrder = false;
+        console.log(validOrder + "4");
+    } else if (salesOrder3 == "blank") {
+        validOrder = false;
+        console.log(validOrder + "5");
+    } else {
+        validOrder = true;
+        console.log(validOrder);
+        //XHR Object
+        var xhr = new XMLHttpRequest();
+        var randomAmount;
+        //open request
+        xhr.open('GET', 'https://www.random.org/integers/?num=1&min=1&max=500&col=1&base=10&format=plain&rnd=new', true);
+        xhr.onload = function() {
+            if(this.status == 200) {
+                //Good request
+                randomAmount = this.responseText;
+                console.log(randomAmount);
+                document.getElementById("amount").value = randomAmount;
+            }
+        }
+        //sends request
+        xhr.send();
+    }
+    
+    
+
+}
 function cvvExplain() {
     alert("For Visa, MasterCard, and Discover: This number is printed in the signature area on the back of the card. It is the 3 digits AFTER the credit card number. \n\nFor American Express: CVV is on the front of the card above he credit card number (either on the right or on the left side of the credit card).");
 }
@@ -25,13 +75,11 @@ function changeCard() {
     }
 
 }
-
-
 function validate() {
 
-    var salesOrder1 = document.getElementById("SO1").value;
-    var salesOrder2 = document.getElementById("SO2").value;
-    var salesOrder3 = document.getElementById("SO3").value;
+    salesOrder1 = document.getElementById("SO1").value;
+    salesOrder2 = document.getElementById("SO2").value;
+    salesOrder3 = document.getElementById("SO3").value;
     var salesOrder = ('000'+(salesOrder1*1).toFixed(0)).slice(-3) + "-" + ('000'+(salesOrder2*1).toFixed(0)).slice(-3) + "-" + salesOrder3;
 
     var totalAmount = document.getElementById("amount").value;
@@ -63,6 +111,8 @@ function validate() {
 
     /*Sales Order JavaScript validation*/
     if (isNaN(salesOrder1) || isNaN(salesOrder2)) {
+        document.getElementById("SOoutput").innerHTML = "Please enter a number in the SO# invoice fields";
+    } else if (salesOrder1 == 0 && salesOrder2 == 0) {
         document.getElementById("SOoutput").innerHTML = "Please enter a number in the SO# invoice fields";
     } else if (salesOrder1 < 0 || salesOrder2 < 0) {
         document.getElementById("SOoutput").innerHTML = "Sales order values must be above 0";
