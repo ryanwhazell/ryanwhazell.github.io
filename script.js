@@ -194,6 +194,7 @@ function validate() {
         
     } else {
         document.getElementById("errorOutput").innerHTML = "<strong>There were errors with your submission. See below:</strong>"
+        document.getElementById("receipt").innerHTML = " ";
         document.getElementById("errorStyle").classList.add('alert-danger');
         document.getElementById("errorStyle").classList.remove('alert-success');
     }
