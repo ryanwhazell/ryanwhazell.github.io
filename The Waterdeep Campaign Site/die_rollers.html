@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Waterdeep Campaign - Die Rollers</title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <style>
+            th, td {
+                text-align: center;
+            }
+            th {
+                padding: 10px;
+            }
+            button {
+                padding: 10px;
+                width: 100%;
+                height: 100%;
+                border-radius: 3px;
+                border-style: none;
+                background-color: #333;
+                color: white;
+            }
+            button:hover {
+                cursor: pointer;
+                opacity: 0.6;
+            }
+            table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="current_session.html">Current Session</a></li>
+                    <li><a href="adventure_summary.html">Adventure Summary</a></li>
+                    <li><a href="maps.html">Maps</a></li>
+                    <li><a href="resources.html">Player Resources</a></li>
+                    <li><a href="die_rollers.html">Die Rollers</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h1>Die Rollers and Randomizers</h1>
+            <p style="text-align: center;"><a href="https://www.google.com/search?q=die+roller&rlz=1C1CHBD_enUS800US800&oq=die+roller&aqs=chrome..69i57j0l6j69i60.4479j1j8&sourceid=chrome&ie=UTF-8" target="_blank">Google's Die Roller</a> is also an excellent die roller</p>
+            
+            <table>
+                <tr>
+                    <th>Die</th>
+                    <th>Button</th>
+                    <th>Result</th>
+                    <th>Total</th>
+                    <th><button onclick="clearAll()">Clear All</button></th>
+                </tr>
+                <tr>
+                    <td>d4</td>
+                    <td><button onclick="rolld4()">Roll</button></td>
+                    <td id="d4result">-</td>
+                    <td id="d4total">-</td>
+                    <td><button onclick="cleard4()">Clear Row</button></td>
+                </tr>
+                <tr>
+                    <td>d6</td>
+                    <td><button onclick="rolld6()">Roll</button></td>
+                    <td id="d6result">-</td>
+                    <td id="d6total">-</td>
+                    <td><button onclick="cleard6()">Clear Row</button></td>
+                </tr>
+                <tr>
+                    <td>d8</td>
+                    <td><button onclick="rolld8()">Roll</button></td>
+                    <td id="d8result">-</td>
+                    <td id="d8total">-</td>
+                    <td><button onclick="cleard8()">Clear Row</button></td>
+                </tr>
+                <tr>
+                    <td>d10</td>
+                    <td><button onclick="rolld10()">Roll</button></td>
+                    <td id="d10result">-</td>
+                    <td id="d10total">-</td>
+                    <td><button onclick="cleard10()">Clear Row</button></td>
+                </tr>
+                <tr>
+                    <td>d12</td>
+                    <td><button onclick="rolld12()">Roll</button></td>
+                    <td id="d12result">-</td>
+                    <td id="d12total">-</td>
+                    <td><button onclick="cleard12()">Clear Row</button></td>
+                </tr>
+                <tr>
+                    <td>d20</td>
+                    <td><button onclick="rolld20()">Roll</button></td>
+                    <td id="d20result">-</td>
+                    <td id="d20total">-</td>
+                    <td><button onclick="cleard20()">Clear Row</button></td>
+                </tr>
+                <tr>
+                    <td>d100</td>
+                    <td><button onclick="rolld100()">Roll</button></td>
+                    <td id="d100result">-</td>
+                    <td id="d100total">-</td>
+                    <td><button onclick="cleard100()">Clear Row</button></td>
+                </tr>
+                <tr>
+                    <th>TOTAL:</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td id="total">-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            
+        </main>
+        
+        <footer>
+            <h2>Waterdeep Adventures</h2>
+            <div class="footer-links">
+                <h3>Quick Links:</h3>
+                <ul>
+                    <li><a href="index.html">3.5e Level Chart</a></li>
+                    <li><a href="https://www.dandwiki.com/wiki/SRD:Feats">Feats</a></li>
+                    <li><a href="https://www.dandwiki.com/wiki/SRD:Spells">Spells</a></li>
+                    <li><a href="character-randomizer.html">Character Randomizer (Unfinished)</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,155 @@
+* {
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+}
+html {
+    margin: 0;
+}
+p {
+    line-height: 24px;
+}
+header {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+#site-logo {
+    float: left;
+    padding-right: 10px;
+}
+#site-title {
+    font-size: 60px;
+    margin-bottom: 0;
+    margin-top: -10px;
+}
+#navbar {
+    overflow: hidden;
+    z-index: 99;
+    background-color: #333;
+}
+#hide, #show {
+    float: left;
+    display: none;
+    color: #f2f2f2;
+    background-color: #666;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.navlink {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    background-color: #333;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#hide:hover, #show:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+.hero-image {
+    width: 100%;
+    z-index: 1;
+}
+.hero-image img {
+    width: 100%;
+}
+
+main {
+    width: 70%;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding-bottom: 100px;
+    padding-top: 70px;
+}
+footer {
+    bottom: 0;
+    padding-bottom: 30px;
+    width: 100%;
+    min-height: 100px;
+    color: white;
+    background-color: black;
+}
+.footer-content {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-content h3 {
+    padding-top: 20px;
+}
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 10px;
+    display: block;
+}
+.footer-content a:hover {
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 700px) {
+    #navbar a {
+      float: none;
+      display: block;
+    }
+    header {
+        width: 100%;
+        text-align: center;
+    }
+    #site-logo {
+        float: none;
+        padding-right: 0;
+    }
+    #site-title {
+        font-size: 60px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .navlink {
+        display: none;
+    }
+    #hide, #show {
+      float: none;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
+}
+
+
+
+
+
+
+
+

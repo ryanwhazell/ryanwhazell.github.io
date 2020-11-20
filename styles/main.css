@@ -132,6 +132,12 @@ footer h3 {
 .footer-links ul li a {
     color: #fcfcfc;
 }
+.map-image {
+    max-width: 100%;
+}
+.map-title {
+    text-align: center;
+}
 
 /*MOBILE STYLES*/
 
