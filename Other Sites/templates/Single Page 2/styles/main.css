@@ -1,0 +1,153 @@
+/*Fonts from dafont.com*/
+@font-face {
+    font-family: Kiona;
+    src: url(../fonts/Kiona-Regular.ttf)
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf)
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+h1, h2, h3 {
+    font-family: 'Kiona';
+    color: #1F1C1F;
+}
+h1 {
+    font-size: 40px;
+}
+p {
+    font-family: 'Roboto';
+    font-size: 19px;
+    line-height: 30px;
+    color: #1F1C1F;
+}
+header {
+    
+}
+
+.section-title {
+    text-align: center;
+}
+.featured-text {
+    text-align: center;
+    font-size: 25px;
+}
+main {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.featured, .recent, .testimonial {
+    margin-bottom: 100px;
+}
+.gallery-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.gallery-column {
+    float: left;
+    width: 25%;
+}
+.gallery-column img {
+    width: 100%;
+}
+.test-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.test-column {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+}
+.test-column img {
+    border-radius: 100px;
+    width: 30%;
+    float: left;
+    margin-right: 10px;
+}
+.quote-mark {
+    color: #13C0A4;
+    font-size: 40px;
+    font-family: 'Roboto';
+}
+
+button {
+    color: #fff;
+    background-color: #13C0A4;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+footer {
+    background-color: #1F1C1F;
+}
+.footer-wrap {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer div h1, footer div p {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1300px) {
+    .test-column {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

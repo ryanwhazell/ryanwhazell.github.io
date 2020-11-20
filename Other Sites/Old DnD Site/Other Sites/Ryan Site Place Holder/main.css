@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 10px;
+    padding-top: 50px;
+}
+h1, p {
+    color: #5e5e5e;
+}
+p {
+    font-size: 17px;
+    line-height: 25px;
+}
+a {
+    color: #00a6e2;
+}

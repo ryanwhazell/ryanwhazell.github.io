@@ -1,0 +1,47 @@
+* {
+    font-family: sans-serif;
+}
+#mainScreen {
+    border: 1px solid black;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#charCreator {
+    border: 1px solid black;
+    padding: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.eventScreen {
+    border: 1px solid black;
+    padding: 10px;
+    min-height: 200px;
+}
+.combatScreen {
+    border: 1px solid black;
+    padding: 10px;
+    min-height: 150px;
+}
+.statSheet {
+    border: 1px solid black;
+    padding: 10px;
+    min-height: 100px;
+    background-color: #eee;
+}
+button {
+    cursor: pointer;
+    margin-right: 10px;
+}
+td, th {
+    text-align: center;
+    padding-right: 30px;
+}
+footer {
+    text-align: center;
+}
+/*Item hover*/
+#mainWeaponBox, #offWeaponBox, #currentSpellBox {
+    cursor: pointer;
+}

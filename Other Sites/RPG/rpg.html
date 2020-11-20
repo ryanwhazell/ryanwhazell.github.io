@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Role-Playing Game</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <h1 style="text-align: center;">JavaScript Testing</h1>
+        
+        <!-- OUTPUT AND TESTING -->
+        <button onclick="">Test Button - currently does nothing</button>
+        <button onclick="equipLightsaber()">Equip Lightsaber - testing only!</button>
+        <p id="demo">DEMO OUTPUT</p>
+        <p id="demo2"></p>
+        
+        
+        <!-- CHARACTER CREATOR SCREEN -->
+        <div id="charCreator">
+            <h2>Create your character:</h2>
+            <p>Welcome to my currently untitled text based browser RPG! This is an entirely personal passion project that, for now, simply serves as a medium for me to expand my understanding of JavaScript as a web developer. I will keep a running tab of developer notes and known bugs/planned fixes at the bottom. Furthermore, there will be a brief tutorial/FAQ section added at some point below the game, so that users have a cleaner introduction to the game.</p>
+            <p>Race will decide starting stats and appearance (as you choose to visualize it in your mind-brain).</p> 
+            <p>Class will also influence stats, as well as starting abilities or equipment.</p>
+            <p>Race:</p>
+            <select id="raceSelect">
+                <option value="Human">Human</option>
+                <option value="Elf">Elf</option>
+                <option value="Halfling">Halfling</option>
+                <option value="Dwarf">Dwarf</option>
+            </select>
+            <p>Class:</p>
+            <select id="classSelect">
+                <option value="Fighter">Fighter</option>
+                <option value="Paladin">Paladin</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Wizard">Wizard</option>
+            </select>
+            <p>Name:</p>
+            <input id="charNameBox" type="text" placeholder="Adventurer">
+            <br><br><button id="createCharacter" onclick="characterSubmit()">Create Character!</button>
+        </div>
+        
+        
+        <!-- MAIN SCREEN -->
+        <div id="mainScreen">
+            <!-- Event Screen -->
+            <div class="eventScreen">
+                <h2>Events:</h2>
+                <p>You are in a field</p>
+                <button onclick="camp()">Camp</button>
+                <button onclick="goblinEncounter()">Explore</button>
+                <button onclick="ratEncounter()">Explore2</button>
+            </div>
+            <!-- Combat Screen -->
+            <div class="combatScreen">
+                <h2>Combat:</h2>
+                <table style="border: 1px solid black;">
+                    <tr>
+                        <th id="enemyName"></th>
+                    </tr>
+                    <tr>
+                        <td id="enemyHealth"></td>
+                    </tr>
+                </table>
+                <!-- In general, use CF one for player actions and CF 2 for enemy actions.  -->
+                <p id="combatFeed">You are not in combat</p>
+                <p id="combatFeed2"></p>
+                <button onclick="attackRoll()">Attack With Weapon</button>
+                <button onclick="attemptCast()">Cast Current Spell</button>
+                <button>Attempt to Run</button>
+            </div>
+            
+            
+            <!-- Character Sheet -->
+            <div class="statSheet">
+                <h2 style="text-align: center;">Character Sheet:</h2>
+                <table>
+                    <tr>
+                        <th>Name:</th>
+                        <th>Race:</th>
+                        <th>Class:</th>
+                        <th>Health:</th>
+                        <th>Magic:</th>
+                        <th>Current Spell:</th>
+                        <th>Main Hand:</th>
+                        <th>Off-Hand:</th>
+                    </tr>
+                    <tr>
+                        <td id="playerNameBox">Item 1</td>
+                        <td id="playerRaceBox">Item 2</td>
+                        <td id="playerClassBox">Item 3</td>
+                        <td id="playerHealthBox">Item 4</td>
+                        <td id="playerMagicBox">Item Magic</td>
+                        <td id="currentSpellBox" onclick="currentSpellDetails()">Item 5</td>
+                        <td id="mainWeaponBox" onclick="mainWeaponDetails()">Item 6</td>
+                        <td id="offWeaponBox" onclick="offWeaponDetails()">Item 7</td>
+                    </tr>
+                </table>
+                <hr>
+                <table>
+                    <tr>
+                        <th>STR</th>
+                        <th>DEX</th>
+                        <th>CON</th>
+                        <th>INT</th>
+                        <th>WIS</th>
+                        <th>CHA</th>
+                        <th>Level:</th>
+                        <th>Experience:</th>
+                        <th>Gold:</th>
+                    </tr>
+                    <tr>
+                        <td id="strBox">0</td>
+                        <td id="dexBox">0</td>
+                        <td id="conBox">0</td>
+                        <td id="intBox">0</td>
+                        <td id="wisBox">0</td>
+                        <td id="chaBox">0</td>
+                        <td id="levelBox">LEVEL</td>
+                        <td id="expBox">EXP</td>
+                        <td id="goldBox">GOLD</td>
+                    </tr>
+                </table>
+                <hr>
+                <h3>Inventory:</h3>
+                <!-- Inventory Array System? This will need work -->
+                
+            </div>
+        </div>
+        
+        <hr>
+        <h2>Developer's Notes:</h2>
+        <ul>
+            <li>Try to get base game build out, then set up functions() as events that the player can explore, similar to modules in D&amp;D</li>
+            <li>Human and Halfling do not have any defined stats, yet</li>
+            <li>Wizard, Paladin, Fighter, and Rogue are more or less built out</li>
+            <li>Paladin code is template for class structure, work on that first</li>
+            <li>Critical Hits at 20 rolls will exist, but critical fails are harder to write into the game so I will likely omit them</li>
+            <li>Look into lightly randomizing stats based on class picks? Currently they are static</li>
+            <li>Starting gear needs to be balanced for all classes. Rogue is a bit weak right now, consider giving them a steel dagger instead of iron?</li>
+            <li><strong>MAKE ITEMS SCALE BASED OFF DEX, STR, OR INT</strong></li>
+            <li>OR <strong>MAKE THEM HAVE STAT REQUIREMENTS</strong></li>
+            <li>Constitution and Wisdom can probably be removed entirely. I don't see them having a place in this kind of game</li>
+            <li>Events have not been developed at all</li>
+            <li>Combat is a WIP</li>
+            <li>Add money system, such as playerGold, gold rewards from combat, and shops.</li>
+            <li>Weapons need damage dice attatched to them. Start with starting weapons.</li>
+            <li>Gold reward will be randomized based on enemy type</li>
+            <li>Stores will likely carry a static stock</li>
+            <li><strong>ITEM DESCRIPTIONS</strong></li>
+            <li>Use a 1-100 randomizer for loot on enemies?</li>
+            <li>Combat will make use of a D20 dice rolling combat system where a base attack bonus is added to the roll. This will use variables such as:</li>
+            <ul>
+                <li>Natural Roll</li>
+                <li>Bonuses and Modifiers</li>
+                <li>Final Roll</li>
+                <li>Added base attack bonus for Paladin, other classes should get their BAB's as well</li>
+                <li>Magic system will need a lot of work.</li>
+                <li>Consider showing the algorithms to the player as combat unfolds. It should be evident to them what kind of rolls they are making, what kind of damage they are doing, etc</li>
+                <li>Look up how to clear variables and make an endCombat() (OR ENEMYDEAD / PLAYERDEAD / FLEDCOMBAT) function to do so</li>
+            </ul>
+        </ul>
+        <hr>
+        <footer>
+            <p>by Ryan Hazell</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
