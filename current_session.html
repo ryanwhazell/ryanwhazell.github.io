@@ -9,6 +9,24 @@
             .current-session{
                 min-height: calc(100vh - 200px);
             }
+            button {
+                padding: 10px;
+                height: 100%;
+                border-radius: 0 3px 3px 0;
+                border-style: none;
+                background-color: #333;
+                color: white;
+                margin: 0;
+            }
+            button:hover {
+                cursor: pointer;
+            }
+            #dm-validation {
+                border-radius: 3px 0 0 3px;
+                border: 1px solid #aaa;
+                margin: 0;
+                padding: 9px;
+            }
             main img {
                 max-width: 100%;
                 height: auto;
@@ -33,7 +51,14 @@
         
         <main>
             <h1>Current Session</h1>
-            <p style="text-align: center;">If there is content specifically relevant to today's session, it will either be here, or sent to group chat.</p>
+            <p style="text-align: center;">Right now I'm using this space for dungeon master stuff, so you aren't allowed to see it unless you know the password:</p>
+            <div style="text-align: center;">
+                <input id="dm-validation"><button id="dm-submit-btn">Submit</button>
+            </div>
+            <div id="dm-eyes-only" class="hidden">
+                <h3>Witchwood Encounters:</h3>
+                <img src="images/Witchwood-Encounters.PNG">
+            </div>
 
         </main>
         
