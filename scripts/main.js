@@ -3,11 +3,13 @@ var dm_validation = document.getElementById('dm-validation');
 var dm_submit_btn = document.getElementById('dm-submit-btn');
 var dm_eyes_only = document.getElementById('dm-eyes-only');
 
-dm_submit_btn.addEventListener('click', function(){
-    if (dm_validation.value == "beans") {
-        dm_eyes_only.classList.remove('hidden');
-    }
-});
+if (dm_submit_btn) {
+    dm_submit_btn.addEventListener('click', function(){
+        if (dm_validation.value == "beans") {
+            dm_eyes_only.classList.remove('hidden');
+        }
+    });
+}
 
 //Make sure 'clear' resets values AND replaces inner HTML content on cells
 var d4result;
